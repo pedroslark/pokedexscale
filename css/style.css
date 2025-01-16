@@ -1,0 +1,114 @@
+/* Nunito Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    outline: none;
+}
+
+
+
+body {
+    text-align: center;
+    background-image: url("../images/background.png");
+}
+
+main {
+    /* background-color: red; */
+    display: inline-block;
+    margin-top: 1.2%;
+    padding: 15px;
+    position: relative;
+}
+
+.pokedex {
+    width:100%
+}
+
+.pokemon__img {
+    position: absolute;
+    bottom: 32.5%;
+    left: 48%;
+    transform: scale(180%) translate(-25%, 0);
+    max-height: 15%;
+}
+
+.pokemon__data {
+    /* background-color: red; */
+    font-weight: 700;
+    /* font-size: 2ch; */
+    font-size: clamp(8px, 4vw, 20px);
+    color: #23235E;
+    position: absolute;
+    top: 26.5%;
+    left: 20%;
+}
+
+.pokemon__name {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.form {
+    /* background-color: red; */
+    position: absolute;
+    width: 54%;
+    top: 15%;
+    left: 28%;
+}
+
+.input__search{
+    width: 100%;
+    border: none;
+    background-color: #FCF8ED;
+    color: #23235E;
+    font-weight: 600;
+    font-size: clamp(8px, 4vw, 0.9rem);    
+}
+
+.buttons {
+    /* background-color: red; */
+    position: absolute;
+    width: 77%;
+    left: 11.5%;
+    bottom: 9%;
+    display: flex;
+    gap: 5%;
+}
+
+.button {
+    width: 44%;
+    border: 0.3vh solid #23235E;
+    border-radius: 10px;
+    color: #23235E;
+    background-color: #F7BC8F;
+    font-weight: 1000;
+    font-size: clamp(8px, 4vw, 16px);
+}
+
+.button:hover {
+    background-color: #fff1b6;
+}
+
+.button:active {
+    box-shadow: inset 1px -1px 0 #23235E;
+    font-size: 0.92rem;
+}
+
+.button-cries {
+    border-radius: 100%;
+    border: 0;
+    background-color: transparent;
+    width: 12%;
+}
+
+.button-cries:hover {
+    transform: scale(105%);
+}
+
+.button-cries:active {
+    transform: scale(95%);
+}
