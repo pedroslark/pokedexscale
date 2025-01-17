@@ -179,3 +179,13 @@ main {
         bottom: 20.7%;
     }
 }
+
+@media (max-width: 300px) {
+    .pokemon__scale__tag, .pokemon__scale__1, .pokemon__scale__12, .pokemon__scale__20 {
+        top: 74.3%;
+    }
+
+    .button-change-scale {
+        bottom: 20.8%;
+    }
+}
