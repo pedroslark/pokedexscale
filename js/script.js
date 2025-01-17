@@ -2,6 +2,12 @@ const pokemonNumber = document.querySelector('.pokemon__number');
 const pokemonName = document.querySelector('.pokemon__name');
 const pokemonImg = document.querySelector('.pokemon__img');
 
+let pokemonScale = 1;
+
+const pokemonScale1 = document.querySelector('.pokemon-scale-value-1');
+const pokemonScale12 = document.querySelector('.pokemon-scale-value-12');
+const pokemonScale20 = document.querySelector('.pokemon-scale-value-20');
+
 const form = document.querySelector('.form');
 const input = document.querySelector('.input__search');
 
@@ -34,6 +40,10 @@ const renderPokemon = async (pokemon) => {
         pokemonName.innerHTML = data.name;
         cries.src = data['cries']['latest'];
         pokemonImg.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+        pokemonScale = data.height;
+        pokemonScale1.innerHTML = pokemonScale*10+'cm';
+        pokemonScale12.innerHTML = (pokemonScale/1.2).toFixed(2)+'cm';
+        pokemonScale20.innerHTML = (pokemonScale/2).toFixed(1)+'cm';
     } else{
         pokemonImg.style.display = 'none';
         pokemonNumber.innerHTML = '';

@@ -68,9 +68,14 @@ main {
     position: absolute;
     top: 75.8%;
     left: 35%;
+    display:none;
 }
 
-.pokemon-scale-1-1-value{
+.active {
+    display: block;
+}
+
+.pokemon-scale-value-1, .pokemon-scale-value-12, .pokemon-scale-value-20 {
     font-weight: 500;
 }
 
@@ -82,7 +87,7 @@ main {
     left: 28%;
 }
 
-.input__search{
+.input__search {
     width: 100%;
     border: none;
     background-color: #FCF8ED;
