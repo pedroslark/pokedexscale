@@ -11,6 +11,11 @@ const pokemonScale20 = document.querySelector('.pokemon-scale-value-20');
 const form = document.querySelector('.form');
 const input = document.querySelector('.input__search');
 
+const buttonChangeScale = document.querySelector('.button-change-scale');
+const scales = document.querySelectorAll('.pokemon__scales > div');
+
+let activeIndex = 0;
+
 const buttonPrev = document.querySelector('.button-prev');
 const buttonNext = document.querySelector('.button-next');
 const buttonCries = document.querySelector('.button-cries');
@@ -41,9 +46,13 @@ const renderPokemon = async (pokemon) => {
         cries.src = data['cries']['latest'];
         pokemonImg.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
         pokemonScale = data.height;
-        pokemonScale1.innerHTML = pokemonScale*10+'cm';
-        pokemonScale12.innerHTML = (pokemonScale/1.2).toFixed(2)+'cm';
-        pokemonScale20.innerHTML = (pokemonScale/2).toFixed(1)+'cm';
+        pokemonScale1.innerHTML = pokemonScale*10+' cm';
+        pokemonScale12.innerHTML = Number.isInteger(pokemonScale / 1.2) 
+            ? (pokemonScale / 1.2) + ' cm' 
+            : (pokemonScale / 1.2).toFixed(2) + ' cm';
+        pokemonScale20.innerHTML = Number.isInteger(pokemonScale / 2) 
+            ? (pokemonScale / 2) + ' cm' 
+            : (pokemonScale / 2).toFixed(1) + ' cm';
     } else{
         pokemonImg.style.display = 'none';
         pokemonNumber.innerHTML = '';
@@ -53,6 +62,20 @@ const renderPokemon = async (pokemon) => {
     searchPokemon = data.id;
     
 }
+
+function changeActiveScale() {
+    // Remover a classe "active" da escala atual
+    scales[activeIndex].classList.remove('active');
+    
+    // Mover para a próxima escala (ou voltar para a primeira)
+    activeIndex = (activeIndex + 1) % scales.length;
+
+    // Adicionar a classe "active" à nova escala
+    scales[activeIndex].classList.add('active');
+}
+
+// Adicionar o evento de clique ao botão
+buttonChangeScale.addEventListener('click', changeActiveScale);
 
 function pokemonCries() {
     cries.play();

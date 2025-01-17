@@ -29,20 +29,27 @@
 
         <img src="#" alt="pokemon" class="pokemon__img">
 
-        <div class="pokemon__scale__1 active">            
-            <span class="pokemon-scale">1:1 = </span>
-            <span class="pokemon-scale-value-1"></span>
+        <div class="pokemon__scales" id="scales">
+            <div class="pokemon__scale__1 active" name="scale-1" id="1">            
+                <span class="pokemon-scale">1:1 = </span>
+                <span class="pokemon-scale-value-1"></span>
+            </div>
+
+            <div class="pokemon__scale__12" name="scale-12" id="12">            
+                <span class="pokemon-scale">1:12 = </span>
+                <span class="pokemon-scale-value-12"></span>
+            </div>
+
+            <div class="pokemon__scale__20" name="scale-12" id="20">            
+                <span class="pokemon-scale">1:20 = </span>
+                <span class="pokemon-scale-value-20"></span>
+            </div>
         </div>
 
-        <div class="pokemon__scale__12">            
-            <span class="pokemon-scale">1:12 = </span>
-            <span class="pokemon-scale-value-12"></span>
-        </div>
-
-        <div class="pokemon__scale__20">            
-            <span class="pokemon-scale">1:20 = </span>
-            <span class="pokemon-scale-value-20"></span>
-        </div>
+        <button class="button-change-scale">
+            <img src="./images/button-change-scale.svg" alt="change scale">
+            <radio id="change-scale" src="#"></radio>
+        </button>
 
         <div class="buttons">
             <button class="button button-prev">PREVIOUS</button>

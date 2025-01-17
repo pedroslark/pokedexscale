@@ -139,3 +139,24 @@ main {
 .button-cries:active {
     transform: scale(95%);
 }
+
+.button-change-scale{
+    position: absolute;
+    width: 77%;
+    left: 80.5%;
+    bottom: 20%;
+    gap: 5%;
+
+    border-radius: 100%;
+    border: 0;
+    background-color: transparent;
+    width: 5.5%;
+}
+
+.button-change-scale:hover {
+    transform: scale(105%);
+}
+
+.button-change-scale:active {
+    transform: scale(95%);
+}
