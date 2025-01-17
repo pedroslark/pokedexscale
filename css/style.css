@@ -67,7 +67,7 @@ main {
     color: #23235E;
     position: absolute;
     top: 75.8%;
-    left: 35%;
+    left: 35.6%;
     display:none;
 }
 
@@ -159,4 +159,23 @@ main {
 
 .button-change-scale:active {
     transform: scale(95%);
+}
+
+@media (max-width: 450px) {
+    .pokemon__scale__tag, .pokemon__scale__1, .pokemon__scale__12, .pokemon__scale__20 {
+        top: 75%;
+    }
+    .button-change-scale {
+        bottom: 20.3%;
+    }
+}
+
+@media (max-width: 370px) {
+    .pokemon__scale__tag, .pokemon__scale__1, .pokemon__scale__12, .pokemon__scale__20 {
+        top: 74.6%;
+    }
+
+    .button-change-scale {
+        bottom: 20.7%;
+    }
 }
