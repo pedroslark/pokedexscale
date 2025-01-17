@@ -165,8 +165,14 @@ main {
     .pokemon__scale__tag, .pokemon__scale__1, .pokemon__scale__12, .pokemon__scale__20 {
         top: 75%;
     }
+
     .button-change-scale {
         bottom: 20.3%;
+    }
+
+    .developed__by{
+        font-weight: 500;
+        font-size: clamp(5px, 4vw, 11px) !important;        
     }
 }
 
@@ -176,8 +182,9 @@ main {
     }
 
     .button-change-scale {
-        bottom: 20.7%;
-    }
+        bottom: 
+        20.7%;
+    }     
 }
 
 @media (max-width: 300px) {
@@ -188,4 +195,20 @@ main {
     .button-change-scale {
         bottom: 20.8%;
     }
+}
+
+.developed__by{
+        font-weight: 500;
+        font-size: clamp(6px, 4vw, 14px);
+        color: #23235E;
+        position: absolute;
+        top: 96%;
+        /* left: 26.5%; */
+        margin:auto;
+        left:0;
+        right:0;
+}
+
+.studio {
+    font-weight: 700;
 }
